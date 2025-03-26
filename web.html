@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP GENERATOR</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            font-family: 'gilroy';
+            background-color: rgb(50, 2, 2);
+            overflow-y: hidden;
+        }
+        h1{
+            font-size: 70px;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            margin-top: 2%;
+        }
+        #cont{
+            height: 10%;
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 5%;
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+        }
+        #btn{
+            width: 9%;
+            height: 5%;
+            border: 2px solid white;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+            padding: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 46%;
+            margin-top: 5%;
+        }
+        #cont2{
+            height: 10%;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 8%;
+        /*    border: 2px solid white;*/
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        @media(max-width:600px){
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html,body{
+                height: 100%;
+                width: 100%;
+                font-family: 'gilroy';
+            }
+            h1{
+                font-size: 40px;
+                margin-top: 7%;
+            }
+            #cont{
+                height: 6%;
+                width: 60%;
+                margin-left: 20%;
+                margin-top: 8%;
+                font-size: 20px;
+            }
+            #btn{
+                width: 25%;
+                margin-left: 37.5%;
+                margin-top: 8%;
+                
+            }
+            #cont2{
+                /*border: 2px solid white;*/
+                width: 80%;
+                height: 8%;
+                margin-left: 10%;
+                margin-top: 30%;
+                font-size: 20px;
+                font-weight: 400;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>OTP GENERATOR</h1>
+    <div id="cont"></div>
+    <button id="btn">generate</button>
+    <div id="cont2">
+
+    </div>
+    <script>
+        let res = document.querySelector("#cont");
+        let btn = document.querySelector("#btn");
+        let cont = document.querySelector("#cont2");
+        btn.addEventListener("click",()=>{
+            let a = Math.floor(Math.random()*9000+1000);
+            console.log(a)
+            res.innerText = `${a}`;
+            cont2.innerText = `YOUR GENERATED OTP IS "${a}"`;
+            
+        })
+    </script>
+</body>
+</html>
